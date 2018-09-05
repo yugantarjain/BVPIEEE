@@ -91,13 +91,32 @@
                     <view key="view" contentMode="scaleToFill" id="Qhk-2x-Gdd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jQU-6q-kLo">
+                                <rect key="frame" x="141.5" y="308" width="92" height="51"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="49e-Tb-3d3" kind="show" id="SjC-0C-xZJ"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wwo-hc-Z9O" customClass="GIDSignInButton">
+                                <rect key="frame" x="67" y="103" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jQU-6q-kLo" firstAttribute="centerY" secondItem="Qhk-2x-Gdd" secondAttribute="centerY" id="XHh-JR-kdh"/>
+                            <constraint firstItem="jQU-6q-kLo" firstAttribute="centerX" secondItem="Qhk-2x-Gdd" secondAttribute="centerX" id="ung-5l-sY8"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gib-6Q-W3u"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ju-xL-503" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-740" y="11"/>
+            <point key="canvasLocation" x="-740" y="10.344827586206897"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">

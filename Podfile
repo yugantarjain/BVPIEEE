@@ -12,5 +12,6 @@ target 'BVPIEEE' do
 	pod 'Firebase/Storage'	
 	pod 'FirebaseUI/Auth'
 	pod 'FirebaseUI/Google'
+	pod 'GoogleSignIn'
 	
 end
