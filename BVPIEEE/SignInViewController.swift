@@ -11,13 +11,37 @@ import Firebase
 import GoogleSignIn
 
 class SignInViewController: UIViewController, GIDSignInDelegate {
+    
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error?) {
+        // ...
+        if let error = error {
+            // ...
+            return
+        }
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        // ...
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                // ...
+                return
+            }
+            // User is signed in
+            // ...
+        }
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self as? GIDSignInUIDelegate
         GIDSignIn.sharedInstance().signIn()
+        
+       
        
     }
     
