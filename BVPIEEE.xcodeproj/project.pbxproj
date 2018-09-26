@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2D30164C22787E0E6A1A2456 /* Pods_BVPIEEE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */; };
-		534761F5213EB46B00D7AF9E /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 534761F4213EB46B00D7AF9E /* SignInViewController.swift */; };
 		53760AAC213EACE2009F6E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAB213EACE2009F6E09 /* AppDelegate.swift */; };
 		53760AAE213EACE2009F6E09 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAD213EACE2009F6E09 /* FirstViewController.swift */; };
 		53760AB0213EACE2009F6E09 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAF213EACE2009F6E09 /* SecondViewController.swift */; };
@@ -20,7 +19,6 @@
 
 /* Begin PBXFileReference section */
 		3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVPIEEE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		534761F4213EB46B00D7AF9E /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		53760AA8213EACE2009F6E09 /* BVPIEEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVPIEEE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53760AAB213EACE2009F6E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53760AAD213EACE2009F6E09 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				53760AAB213EACE2009F6E09 /* AppDelegate.swift */,
-				534761F4213EB46B00D7AF9E /* SignInViewController.swift */,
 				53760AAD213EACE2009F6E09 /* FirstViewController.swift */,
 				53760AAF213EACE2009F6E09 /* SecondViewController.swift */,
 				53760AB1213EACE2009F6E09 /* Main.storyboard */,
@@ -243,7 +240,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				534761F5213EB46B00D7AF9E /* SignInViewController.swift in Sources */,
 				53760AB0213EACE2009F6E09 /* SecondViewController.swift in Sources */,
 				53760AAC213EACE2009F6E09 /* AppDelegate.swift in Sources */,
 				53760AAE213EACE2009F6E09 /* FirstViewController.swift in Sources */,
