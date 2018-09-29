@@ -13,13 +13,18 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        for rb in rb
+        {
+            //rb.bounds.size.height = rb.bounds.size.width;
+            rb.layer.cornerRadius = rb.bounds.size.height/2;
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
-
-
+    @IBOutlet var rb: [UIButton]!
 }
-
