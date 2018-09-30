@@ -63,13 +63,22 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
         return postData.count
     }
     
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         child = tableView.cellForRow(at: indexPath)?.textLabel?.text
         performSegue(withIdentifier: "wInfo", sender: self)
-        
-        
-
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        let next = segue.destination as! WInfoViewController
+        
+        // Pass the selected object to the new view controller.
+        if(segue.identifier == "wInfo")
+        {
+            next.text = child
+        }
+    }
+    
 
     // MARK: - Table view data source
     
@@ -165,19 +174,6 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation*/
      
-     
-     
-     
-     
-     
-     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        let next = segue.destination as! WInfoViewController
-        
-        // Pass the selected object to the new view controller.
-        if(segue.identifier == "wInfo"){
-            next.text = child}
-    }
+    
 
 }
