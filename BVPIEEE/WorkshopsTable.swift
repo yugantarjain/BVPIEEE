@@ -16,6 +16,7 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     var handle2: DatabaseHandle!
+    var child: String!
 
     @IBOutlet var tableView: UITableView!
     
@@ -53,13 +54,21 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         cell?.textLabel?.text = postData[indexPath.row]
-        cell?.detailTextLabel?.text = "abc"
+//        cell?.detailTextLabel?.text = "abc"
         return cell!
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return postData.count
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        child = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        performSegue(withIdentifier: "wInfo", sender: self)
+        
+        
+
     }
 
     // MARK: - Table view data source
@@ -154,7 +163,7 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
     /*
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    // In a storyboard-based application, you will often want to do a little preparation before navigation*/
      
      
      
@@ -164,8 +173,11 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
      
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
+        let next = segue.destination as! WInfoViewController
+        
         // Pass the selected object to the new view controller.
+        if(segue.identifier == "wInfo"){
+            next.text = child}
     }
-    */
 
 }

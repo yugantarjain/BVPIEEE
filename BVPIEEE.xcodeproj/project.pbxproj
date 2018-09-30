@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D30164C22787E0E6A1A2456 /* Pods_BVPIEEE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */; };
+		533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533689C4215FEF9700CC41D7 /* WInfoViewController.swift */; };
 		53760AAC213EACE2009F6E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAB213EACE2009F6E09 /* AppDelegate.swift */; };
 		53760AAE213EACE2009F6E09 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAD213EACE2009F6E09 /* FirstViewController.swift */; };
 		53760AB3213EACE2009F6E09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 53760AB1213EACE2009F6E09 /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 
 /* Begin PBXFileReference section */
 		3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVPIEEE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		533689C4215FEF9700CC41D7 /* WInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WInfoViewController.swift; sourceTree = "<group>"; };
 		53760AA8213EACE2009F6E09 /* BVPIEEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVPIEEE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53760AAB213EACE2009F6E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53760AAD213EACE2009F6E09 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +79,7 @@
 				53760AAB213EACE2009F6E09 /* AppDelegate.swift */,
 				53760AAD213EACE2009F6E09 /* FirstViewController.swift */,
 				53ED5213215FA2A100A56519 /* WorkshopsTable.swift */,
+				533689C4215FEF9700CC41D7 /* WInfoViewController.swift */,
 				53760AB1213EACE2009F6E09 /* Main.storyboard */,
 				53760AB4213EACE3009F6E09 /* Assets.xcassets */,
 				53760AB6213EACE3009F6E09 /* LaunchScreen.storyboard */,
@@ -215,6 +218,7 @@
 			files = (
 				53760AAC213EACE2009F6E09 /* AppDelegate.swift in Sources */,
 				53760AAE213EACE2009F6E09 /* FirstViewController.swift in Sources */,
+				533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */,
 				53ED5214215FA2A100A56519 /* WorkshopsTable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -362,7 +366,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BVPIEEE/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BVPIEEE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -377,7 +384,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BVPIEEE/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.BVPIEEE;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
