@@ -7,16 +7,22 @@
 //
 
 import UIKit
+import WebKit
 
-class WInfoViewController: UIViewController {
+class WInfoViewController: UIViewController, WKUIDelegate {
     
     var text: String!
-
+    var webView: WKWebView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         abcd.text = text;
+        let webConfiguration = WKWebViewConfiguration()
+        webView = WKWebView(frame: .zero, configuration: webConfiguration)
+        webView.uiDelegate = self
+       
         
     }
 
@@ -27,6 +33,12 @@ class WInfoViewController: UIViewController {
     
     @IBOutlet weak var abcd: UILabel!
     
+    @IBAction func link(_ sender: Any) {
+        let myURL = URL(string: "https://www.google.com")
+        let myRequest = URLRequest(url: myURL!)
+        view = webView
+        webView.load(myRequest)
+    }
     /*
     // MARK: - Navigation
 
