@@ -12,10 +12,8 @@ import FirebaseDatabase
 class workshopsTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var postData = [String]()
-    var detail = [String]()
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
-    var handle2: DatabaseHandle!
     var child: String!
 
     @IBOutlet var tableView: UITableView!

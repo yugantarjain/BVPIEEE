@@ -8,5 +8,6 @@ target 'BVPIEEE' do
   # Pods for BVPIEEE
 	pod 'Firebase/Core'
 	pod 'Firebase/Database'
-	pod 'Firebase/Storage'		
+	pod 'Firebase/Storage'	
+	pod 'Firebase/Messaging'	
 end
