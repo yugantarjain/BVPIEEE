@@ -20,9 +20,11 @@
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
-			<string>None</string>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
-			<array/>
+			<array>
+				<string>com.googleusercontent.apps.684839789760-tg14v0vtllm5tuprmjm7ajema516brd6</string>
+			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>

@@ -13,6 +13,7 @@ class FirstViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        tabBarController?.selectedIndex = tindex
         for rb in rb
         {
             //rb.bounds.size.height = rb.bounds.size.width;
