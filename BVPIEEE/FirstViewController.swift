@@ -26,5 +26,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
         
     }
+    
     @IBOutlet var rb: [UIButton]!
+    
+    @IBAction func goToChapters(_ sender: UIButton) {
+        performSegue(withIdentifier: "toChapters", sender: self)
+    }
 }
