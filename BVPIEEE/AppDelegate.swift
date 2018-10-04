@@ -9,11 +9,35 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FirebaseAuth
+
 var tindex = 0
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("failed",error)
+            return
+        }
+        print("success",user)
+        
+        guard let authentication = user.authentication else { return }
+        let credential = GoogleAuthProvider.credential(withIDToken: authentication.idToken,
+                                                       accessToken: authentication.accessToken)
+        
+        Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+            if let error = error {
+                print("failed to log into firebase, ",error)
+                return
+            }
+            guard let userID = user?.userID else { return }
+            print("Successfully logged into firebase", userID)
+        }
+        
+        
+        
+        
         
     }
     
@@ -27,11 +51,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         ref = Database.database().reference()
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+        GIDSignIn.sharedInstance().delegate = self
 
 
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        return GIDSignIn.sharedInstance().handle(url,
+                                                 sourceApplication:options[UIApplicationOpenURLOptionsKey.sourceApplication] as? String,
+                                                 annotation: [:])
+    }
+    
+    
     
     
     func applicationWillResignActive(_ application: UIApplication) {

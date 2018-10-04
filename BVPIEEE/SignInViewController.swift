@@ -3,21 +3,27 @@
 //  BVPIEEE
 //
 //  Created by yugantar jain on 02/10/18.
-//  Copyright © 2018 yugantar jain. All rights reserved.
+//  Copyright © 2018 yugantar jain, inika roy. All rights reserved.
 //
 
 import UIKit
 import Firebase
 import GoogleSignIn
+import FirebaseAuth
 
 class SignInViewController: UIViewController, GIDSignInUIDelegate {
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        
-    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
+        
+        
 
         // Do any additional setup after loading the view.
         let sib = GIDSignInButton()

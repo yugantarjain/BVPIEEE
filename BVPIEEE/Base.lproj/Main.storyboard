@@ -696,7 +696,4 @@
     <resources>
         <image name="first" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="chs-sX-Sll"/>
-    </inferredMetricsTieBreakers>
 </document>
