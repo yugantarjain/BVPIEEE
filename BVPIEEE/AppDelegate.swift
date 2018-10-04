@@ -16,6 +16,7 @@ var tindex = 0
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
         if let error = error {
             print("failed",error)
             return
@@ -34,11 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             guard let userID = user?.userID else { return }
             print("Successfully logged into firebase", userID)
         }
-        
-        
-        
-        
-        
     }
     
    
@@ -52,8 +48,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().delegate = self
-
-
         
         return true
     }

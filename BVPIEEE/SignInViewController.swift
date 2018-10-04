@@ -16,15 +16,6 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let firebaseAuth = Auth.auth()
-        do {
-            try firebaseAuth.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-        
-        
-
         // Do any additional setup after loading the view.
         let sib = GIDSignInButton()
         sib.frame = CGRect(x: 5, y: 50, width: view.frame.width-10, height: 30)
@@ -32,6 +23,14 @@ class SignInViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         GIDSignIn.sharedInstance().uiDelegate = self
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        Auth.auth().addStateDidChangeListener() { auth, user in
+            if user != nil {
+                self.performSegue(withIdentifier: "toApp", sender: self)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
