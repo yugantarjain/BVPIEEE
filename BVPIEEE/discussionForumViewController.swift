@@ -8,22 +8,32 @@
 
 import UIKit
 import FirebaseDatabase
+import MessageKit
+import Messages
+import MessageUI
 
-class discussionForumViewController: UIViewController {
+
+class discussionForumViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
-    var ids =  [String]()
-    
+    var author = [String]()
+    var message = [String]()
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+//        var sender =  UILabel()
+//        var message = UILabel()
+//        var y = 18
 
-        // Do any additional setup after loading the view.
-        var sender: UILabel!
-        var message: UILabel!
         
         ref = Database.database().reference()
+        tableView.delegate = self
+        tableView.dataSource = self
         
         handle = ref.child("msg_cs").observe(.value, with: { (snapshot) in
             for data in snapshot.children.allObjects as! [DataSnapshot]
@@ -31,11 +41,41 @@ class discussionForumViewController: UIViewController {
                 let a = data.value as?  [String: AnyObject]
                 let b = a?["author"]
                 let c = a?["message"]
+                self.author.append(b as! String)
+                self.message.append(c as! String)
+                self.tableView.reloadData()
                 print(b)
                 print(c)
+//                sender.text = b as? String
+//                message.text = c as? String
+//                print(sender)
+//                print(message)
+//                sender.frame = CGRect(x: 10, y: y, width: 50, height: 18)
+//                y = y+25
+//                message.frame = CGRect(x: 10, y: y, width: 50, height: 18)
+//                message.backgroundColor = UIColor.lightGray
+//                y = y+25
+//                self.view.addSubview(sender)
+//                self.view.addSubview(message)
+                
+                
+                
             }
         })
         
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "amcell")
+        cell?.textLabel?.text = author[indexPath.row]
+        cell?.detailTextLabel?.text = message[indexPath.row]
+        return cell!
+        
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return author.count
     }
         
 
