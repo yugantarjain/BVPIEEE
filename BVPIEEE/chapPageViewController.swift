@@ -21,7 +21,10 @@ class chapPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
+    @IBAction func toDiscussionForum(_ sender: UIButton) {
+        performSegue(withIdentifier: "toDF", sender: self)
+    }
+    
     
     
     /*    // MARK: - Navigation

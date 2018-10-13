@@ -8,29 +8,27 @@
 
 import UIKit
 import FirebaseDatabase
-import MessageKit
-import Messages
-import MessageUI
 
-
-class discussionForumViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class discussionForumViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     var author = [String]()
     var message = [String]()
+    var oh = CGFloat()
+    var no = 0
+    var check: CGFloat = 0
 
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.textField.delegate = self
         
-        
-//        var sender =  UILabel()
-//        var message = UILabel()
-//        var y = 18
-
-        
+        oh = self.view.bounds.height
+        print(oh)
+   
         ref = Database.database().reference()
         tableView.delegate = self
         tableView.dataSource = self
@@ -44,25 +42,51 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
                 self.author.append(b as! String)
                 self.message.append(c as! String)
                 self.tableView.reloadData()
-                print(b)
-                print(c)
-//                sender.text = b as? String
-//                message.text = c as? String
-//                print(sender)
-//                print(message)
-//                sender.frame = CGRect(x: 10, y: y, width: 50, height: 18)
-//                y = y+25
-//                message.frame = CGRect(x: 10, y: y, width: 50, height: 18)
-//                message.backgroundColor = UIColor.lightGray
-//                y = y+25
-//                self.view.addSubview(sender)
-//                self.view.addSubview(message)
-                
-                
-                
             }
         })
         
+        let center: NotificationCenter = NotificationCenter.default
+        center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        center.addObserver(self, selector: #selector(keyboardDidHide(notification: )), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    @objc func keyboardDidShow(notification: Notification)
+    {
+        print("show")
+        let info: NSDictionary = notification.userInfo! as NSDictionary
+        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
+        if(check == 0)
+        {
+            check = keyboardSize.height
+        }
+        let keyboardY = oh - check
+        print(keyboardY)
+        print(keyboardSize.height)
+        print(self.oh)
+        if(no == 0)
+        {
+            UIView.animate(withDuration: 0.50) {
+                self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: keyboardY)
+                self.no = self.no + 1;
+            }
+        }
+    }
+    
+    @objc func keyboardDidHide(notification: Notification)
+    {
+        print("hide")
+        UIView.animate(withDuration: 0.50) {
+            print(self.oh)
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.oh)
+            self.no = 0
+//            self.check = 1
+        }
+    }
+    
+    func textFieldShouldReturn(_ field : UITextField) -> Bool {
+//        self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: oh)
+        field.resignFirstResponder()
+        return true;
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -77,14 +101,23 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return author.count
     }
-        
-
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 
