@@ -60,4 +60,8 @@ class FirstViewController: UIViewController {
     @IBAction func goToChapters(_ sender: UIButton) {
         performSegue(withIdentifier: "toChapters", sender: self)
     }
+    @IBAction func goToSigs(_ sender: UIButton) {
+        performSegue(withIdentifier: "toSigs", sender: self)
+    }
+    
 }
