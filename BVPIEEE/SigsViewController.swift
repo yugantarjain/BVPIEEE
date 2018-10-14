@@ -11,6 +11,7 @@ import UIKit
 class SigsViewController: UIViewController {
     
     var code: String!
+    var code3: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,8 @@ class SigsViewController: UIViewController {
     }
     
     @IBAction func SigClicked(_ sender: UIButton) {
-        code = sender.titleLabel?.text
-        switch code {
+        code3 = sender.titleLabel?.text
+        switch code3 {
         case "CODE-X": code = "msg_codex"
         case "DRISHTI": code = "msg_drishti"
         case "RAU": code = "msg_rau"
@@ -42,6 +43,7 @@ class SigsViewController: UIViewController {
         let a = segue.destination as! chapPageViewController
         // Pass the selected object to the new view controller.
         a.code2 = code
+        a.navTitle = code3
     }
     
     @IBAction func goBack(_ sender: UIBarButtonItem) {

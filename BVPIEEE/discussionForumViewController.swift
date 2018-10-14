@@ -28,6 +28,7 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         self.textField.delegate = self
+        self.title = "Discussion Forum"
         
         oh = self.view.bounds.height
    

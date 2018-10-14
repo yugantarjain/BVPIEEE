@@ -15,9 +15,13 @@ class FirstViewController: UIViewController {
     var handle: DatabaseHandle!
     var z: String!
 
+    @IBOutlet weak var image: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        image.image = UIImage(named: "home")
        
         
         ref = Database.database().reference()
@@ -62,6 +66,14 @@ class FirstViewController: UIViewController {
     }
     @IBAction func goToSigs(_ sender: UIButton) {
         performSegue(withIdentifier: "toSigs", sender: self)
+    }
+    @IBAction func joinIEEE(_ sender: UIButton) {
+        performSegue(withIdentifier: "join", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let a = segue.destination as! joinViewController
+        
+        a.link = "https://www.ieee.org/membership/join/index.html"
     }
     
 }

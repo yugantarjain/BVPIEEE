@@ -12,7 +12,7 @@ import WebKit
 class joinViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
-    var link = "https://www.ieee.org/membership/join/index.html"
+    var link: String!
     let a = UIButton()
 
     @IBOutlet weak var joinIEEE: WKWebView!

@@ -13,18 +13,24 @@ import FirebaseAuth
 class chapPageViewController: UIViewController {
     
     var code2: String!
+    var navTitle: String!
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     var member = false
 
+    @IBOutlet weak var image: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.title = navTitle
+        image.image = UIImage(named: code2)
+        
         ref = Database.database().reference()
         
         let a = Auth.auth().currentUser?.email
-        
         handle = ref.child("ieee_emails").observe(.childAdded, with: { (snapshot) in
             if let b = snapshot.value as? String
             {
@@ -34,7 +40,6 @@ class chapPageViewController: UIViewController {
                 }
             }
         })
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -63,8 +68,19 @@ class chapPageViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         let a = segue.destination as! discussionForumViewController
+        let b = segue.destination as! joinViewController
         // Pass the selected object to the new view controller.
-        a.chapterChild = code2
+        if(segue.identifier == "toDF")
+        {
+            a.chapterChild = code2
+        }
+        else if(segue.identifier == "fbPage")
+        {
+            b.link = ""
+        }
+    }
+    @IBAction func toFB(_ sender: UIButton) {
+        performSegue(withIdentifier: "fbPage", sender: self)
     }
     
    

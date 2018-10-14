@@ -11,6 +11,7 @@ import UIKit
 class ChaptersViewController: UIViewController {
     
     var code: String!
+    var code3: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +25,8 @@ class ChaptersViewController: UIViewController {
     }
     
     @IBAction func chapterClicked(_ sender: UIButton) {
-        code = sender.titleLabel?.text
-        switch code {
+        code3 = sender.titleLabel?.text
+        switch code3 {
         case "RAS": code = "msg_ras"
         case "CS": code = "msg_cs"
         case "IAS": code = "msg_ias"
@@ -42,6 +43,7 @@ class ChaptersViewController: UIViewController {
         
         // Pass the selected object to the new view controller.
         a.code2 = code
+        a.navTitle = code3
     }
     
     @IBAction func goBack(_ sender: UIBarButtonItem) {
