@@ -18,7 +18,9 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
     var author = [String]()
     var message = [String]()
     var oh = CGFloat()
-    var chapterChild = "msg_cs"
+    var chapterChild: String!
+    
+    
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!

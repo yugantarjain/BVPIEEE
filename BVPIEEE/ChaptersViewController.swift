@@ -9,6 +9,8 @@
 import UIKit
 
 class ChaptersViewController: UIViewController {
+    
+    var code: String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,20 +24,32 @@ class ChaptersViewController: UIViewController {
     }
     
     @IBAction func chapterClicked(_ sender: UIButton) {
+        code = sender.titleLabel?.text
+        switch code {
+        case "RAS": code = "msg_ras"
+        case "CS": code = "msg_cs"
+        case "IAS": code = "msg_ias"
+        case "HKN": code = "msg_hkn"
+        case "WIE": code = "msg_wie"
+        default: code = "messages"
+        }
         performSegue(withIdentifier: "chapPage", sender: self)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        let a = segue.destination as! chapPageViewController
+        
+        // Pass the selected object to the new view controller.
+        a.code2 = code
+    }
+    
     @IBAction func goBack(_ sender: UIBarButtonItem) {
         dismiss(animated: true) { }
     }
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
