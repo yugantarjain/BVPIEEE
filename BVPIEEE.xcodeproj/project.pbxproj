@@ -18,6 +18,7 @@
 		537EF6412166146600472FE9 /* discussionForumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 537EF6402166146600472FE9 /* discussionForumViewController.swift */; };
 		53B905C821628D52008D3C0A /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53B905C721628D52008D3C0A /* ChaptersViewController.swift */; };
 		53C039D121735BA8002C0DDF /* SigsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C039D021735BA8002C0DDF /* SigsViewController.swift */; };
+		53C039D321736F87002C0DDF /* joinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C039D221736F87002C0DDF /* joinViewController.swift */; };
 		53DB8EDF2163C85300792ADC /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DB8EDE2163C85300792ADC /* SignInViewController.swift */; };
 		53DE1B6F21636F75009181B7 /* chapPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53DE1B6E21636F75009181B7 /* chapPageViewController.swift */; };
 		53ED5214215FA2A100A56519 /* WorkshopsTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53ED5213215FA2A100A56519 /* WorkshopsTable.swift */; };
@@ -37,6 +38,7 @@
 		537EF6402166146600472FE9 /* discussionForumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = discussionForumViewController.swift; sourceTree = "<group>"; };
 		53B905C721628D52008D3C0A /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		53C039D021735BA8002C0DDF /* SigsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SigsViewController.swift; sourceTree = "<group>"; };
+		53C039D221736F87002C0DDF /* joinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = joinViewController.swift; sourceTree = "<group>"; };
 		53DB8EDE2163C85300792ADC /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		53DE1B6E21636F75009181B7 /* chapPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chapPageViewController.swift; sourceTree = "<group>"; };
 		53ED5213215FA2A100A56519 /* WorkshopsTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkshopsTable.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				53C039D021735BA8002C0DDF /* SigsViewController.swift */,
 				53DE1B6E21636F75009181B7 /* chapPageViewController.swift */,
 				537EF6402166146600472FE9 /* discussionForumViewController.swift */,
+				53C039D221736F87002C0DDF /* joinViewController.swift */,
 				53760AB1213EACE2009F6E09 /* Main.storyboard */,
 				53760AB4213EACE3009F6E09 /* Assets.xcassets */,
 				53760AB6213EACE3009F6E09 /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 				537EF6412166146600472FE9 /* discussionForumViewController.swift in Sources */,
 				53B905C821628D52008D3C0A /* ChaptersViewController.swift in Sources */,
 				53760AAE213EACE2009F6E09 /* HomeViewController.swift in Sources */,
+				53C039D321736F87002C0DDF /* joinViewController.swift in Sources */,
 				533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */,
 				53ED5214215FA2A100A56519 /* WorkshopsTable.swift in Sources */,
 				53DE1B6F21636F75009181B7 /* chapPageViewController.swift in Sources */,

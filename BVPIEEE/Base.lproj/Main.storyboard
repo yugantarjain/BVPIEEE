@@ -137,6 +137,9 @@
                                                         <state key="normal" title="Join IEEE">
                                                             <color key="titleColor" red="0.0" green="0.56031829119999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
+                                                        <connections>
+                                                            <segue destination="eVM-0E-ULt" kind="show" id="UsF-4Y-gON"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -203,27 +206,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YQT-Vw-syX">
-                                <rect key="frame" x="113" y="178" width="185" height="29"/>
+                                <rect key="frame" x="16" y="108" width="288" height="310"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <string key="text">IEEE is the world’s largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-q2-9ft">
-                                <rect key="frame" x="210" y="526" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mqb-q2-9ft">
+                                <rect key="frame" x="16" y="36" width="34" height="30"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <segue destination="49e-Tb-3d3" kind="show" id="gab-Pa-z9I"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About Us" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1MS-qi-IDS">
+                                <rect key="frame" x="100" y="33" width="121" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="YQT-Vw-syX" firstAttribute="leading" secondItem="IBe-f7-GKV" secondAttribute="leading" constant="113" id="QIb-3A-xec"/>
-                            <constraint firstItem="YQT-Vw-syX" firstAttribute="top" secondItem="IBe-f7-GKV" secondAttribute="top" constant="158" id="aST-ue-XMO"/>
-                            <constraint firstItem="IBe-f7-GKV" firstAttribute="trailing" secondItem="YQT-Vw-syX" secondAttribute="trailing" constant="22" id="hj8-mu-peZ"/>
-                            <constraint firstItem="IBe-f7-GKV" firstAttribute="bottom" secondItem="YQT-Vw-syX" secondAttribute="bottom" constant="361" id="yJz-vV-u92"/>
+                            <constraint firstItem="mqb-q2-9ft" firstAttribute="leading" secondItem="YQT-Vw-syX" secondAttribute="leading" id="1Aw-1g-kN3"/>
+                            <constraint firstItem="mqb-q2-9ft" firstAttribute="leading" secondItem="G5Z-8u-9oV" secondAttribute="leadingMargin" id="1Vz-XX-fB9"/>
+                            <constraint firstItem="1MS-qi-IDS" firstAttribute="top" secondItem="IBe-f7-GKV" secondAttribute="top" constant="13" id="7M2-xO-2Or"/>
+                            <constraint firstItem="YQT-Vw-syX" firstAttribute="top" secondItem="1MS-qi-IDS" secondAttribute="bottom" constant="39" id="F7O-06-vv7"/>
+                            <constraint firstItem="1MS-qi-IDS" firstAttribute="centerX" secondItem="YQT-Vw-syX" secondAttribute="centerX" id="Jqq-cQ-zdR"/>
+                            <constraint firstItem="mqb-q2-9ft" firstAttribute="centerY" secondItem="1MS-qi-IDS" secondAttribute="centerY" id="RVb-EQ-Jve"/>
+                            <constraint firstItem="YQT-Vw-syX" firstAttribute="trailing" secondItem="G5Z-8u-9oV" secondAttribute="trailingMargin" id="qs4-7k-bnc"/>
+                            <constraint firstItem="IBe-f7-GKV" firstAttribute="bottom" secondItem="YQT-Vw-syX" secondAttribute="bottom" constant="150" id="wd1-7J-Eo5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="IBe-f7-GKV"/>
                     </view>
@@ -231,7 +243,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tAj-f0-AWv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1698" y="-218"/>
+            <point key="canvasLocation" x="1696.875" y="-218.66197183098592"/>
+        </scene>
+        <!--Join View Controller-->
+        <scene sceneID="hdp-nS-QYq">
+            <objects>
+                <viewController id="eVM-0E-ULt" customClass="joinViewController" customModule="BVPIEEE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9up-jw-Gug">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZNf-dw-y7L">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CSP-jV-03c">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Join IEEE" id="cnB-lN-pyu">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="v2M-Av-Upe">
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="show" id="vFw-mJ-uwY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CSP-jV-03c" firstAttribute="leading" secondItem="9up-jw-Gug" secondAttribute="leading" id="5dS-5n-vkI"/>
+                            <constraint firstItem="ZNf-dw-y7L" firstAttribute="top" secondItem="CSP-jV-03c" secondAttribute="bottom" id="IHI-aD-sE3"/>
+                            <constraint firstItem="CSP-jV-03c" firstAttribute="leading" secondItem="ZNf-dw-y7L" secondAttribute="leading" id="K7c-4O-TzD"/>
+                            <constraint firstItem="CSP-jV-03c" firstAttribute="top" secondItem="Zt4-j4-0zm" secondAttribute="top" id="RyY-Uu-2rI"/>
+                            <constraint firstItem="CSP-jV-03c" firstAttribute="trailing" secondItem="ZNf-dw-y7L" secondAttribute="trailing" id="avU-7r-azv"/>
+                            <constraint firstItem="ZNf-dw-y7L" firstAttribute="bottom" secondItem="Zt4-j4-0zm" secondAttribute="bottom" id="cQN-zL-tgB"/>
+                            <constraint firstAttribute="trailing" secondItem="CSP-jV-03c" secondAttribute="trailing" id="nXS-rd-ovg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zt4-j4-0zm"/>
+                    </view>
+                    <connections>
+                        <outlet property="joinIEEE" destination="ZNf-dw-y7L" id="ahV-Ku-uIp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlp-Xi-xlb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2853.75" y="-214.43661971830986"/>
         </scene>
         <!--Chapters-->
         <scene sceneID="acT-TL-xlZ">
@@ -452,7 +513,7 @@
                                                     <color key="textColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" id="df3-e7-L2I">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="df3-e7-L2I">
                                                     <rect key="frame" x="15" y="20" width="50" height="17"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -850,7 +911,7 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VAT-qG-zp3"/>
+        <segue reference="vFw-mJ-uwY"/>
         <segue reference="QjK-r2-uLq"/>
     </inferredMetricsTieBreakers>
 </document>
