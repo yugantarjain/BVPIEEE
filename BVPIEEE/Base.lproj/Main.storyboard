@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e73-JG-qF6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="caS-Ce-ut4">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -354,7 +354,6 @@
                                         </state>
                                         <connections>
                                             <action selector="toDiscussionForum:" destination="9fF-Y0-jKv" eventType="touchUpInside" id="KaO-Yw-61B"/>
-                                            <segue destination="e73-JG-qF6" kind="show" id="Onb-G6-yKm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qJY-Sq-JLf">
@@ -415,6 +414,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vSs-gU-hJq"/>
                     </view>
+                    <connections>
+                        <segue destination="e73-JG-qF6" kind="show" identifier="toDF" id="Xsg-qr-WkR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9b-aN-AfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,6 +475,9 @@
                                 <state key="normal" title="Send">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="send:" destination="e73-JG-qF6" eventType="touchUpInside" id="RZL-ug-tEa"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.32852089410000002" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -8,6 +8,8 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
+import GoogleSignIn
 
 class discussionForumViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate {
     
@@ -16,8 +18,7 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
     var author = [String]()
     var message = [String]()
     var oh = CGFloat()
-    var no = 0
-    var check: CGFloat = 0
+    var chapterChild = "msg_cs"
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var textField: UITextField!
@@ -27,65 +28,48 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
         self.textField.delegate = self
         
         oh = self.view.bounds.height
-        print(oh)
    
         ref = Database.database().reference()
         tableView.delegate = self
         tableView.dataSource = self
         
-        handle = ref.child("msg_cs").observe(.value, with: { (snapshot) in
+        handle = ref.child(chapterChild).observe(.value, with: { (snapshot) in
             for data in snapshot.children.allObjects as! [DataSnapshot]
             {
                 let a = data.value as?  [String: AnyObject]
                 let b = a?["author"]
                 let c = a?["message"]
+                if(b == nil || c == nil)
+                {
+                    self.author.removeAll()
+                    self.message.removeAll()
+                    continue
+                }
                 self.author.append(b as! String)
                 self.message.append(c as! String)
-                self.tableView.reloadData()
             }
+            self.tableView.reloadData()
         })
         
         let center: NotificationCenter = NotificationCenter.default
-        center.addObserver(self, selector: #selector(keyboardDidShow(notification: )), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        center.addObserver(self, selector: #selector(keyboardDidHide(notification: )), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        center.addObserver(self, selector: #selector(keyboardWillShow(notification: )), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
     }
     
-    @objc func keyboardDidShow(notification: Notification)
+    @objc func keyboardWillShow(notification: Notification)
     {
-        print("show")
-        let info: NSDictionary = notification.userInfo! as NSDictionary
-        let keyboardSize = (info[UIKeyboardFrameBeginUserInfoKey] as! NSValue).cgRectValue
-        if(check == 0)
+        if let keyboardFrame: NSValue = notification.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue
         {
-            check = keyboardSize.height
-        }
-        let keyboardY = oh - check
-        print(keyboardY)
-        print(keyboardSize.height)
-        print(self.oh)
-        if(no == 0)
-        {
-            UIView.animate(withDuration: 0.50) {
-                self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: keyboardY)
-                self.no = self.no + 1;
-            }
-        }
-    }
-    
-    @objc func keyboardDidHide(notification: Notification)
-    {
-        print("hide")
-        UIView.animate(withDuration: 0.50) {
-            print(self.oh)
-            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.oh)
-            self.no = 0
-//            self.check = 1
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            let keyboardY = oh - keyboardHeight
+            self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: keyboardY)
+
         }
     }
     
     func textFieldShouldReturn(_ field : UITextField) -> Bool {
-//        self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: oh)
         field.resignFirstResponder()
+        self.view.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width, height: self.oh)
         return true;
     }
     
@@ -95,7 +79,6 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
         cell?.textLabel?.text = author[indexPath.row]
         cell?.detailTextLabel?.text = message[indexPath.row]
         return cell!
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -107,7 +90,17 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
     
-    
+    @IBAction func send(_ sender: UIButton) {
+        if(textField.hasText)
+        {
+            let a = Auth.auth().currentUser?.displayName
+            let m = textField.text
+            let autoID = ref.childByAutoId().key as! String
+            ref.child(chapterChild).child(autoID).child("author").setValue(a)
+            ref.child(chapterChild).child(autoID).child("message").setValue(m)
+        }
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -115,9 +108,7 @@ class discussionForumViewController: UIViewController, UITableViewDataSource, UI
     }
     
     
-    
-    
-    
+
     /*
     // MARK: - Navigation
 
