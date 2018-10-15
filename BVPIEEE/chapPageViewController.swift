@@ -28,6 +28,10 @@ class chapPageViewController: UIViewController {
         self.title = navTitle
         image.image = UIImage(named: code2)
         
+        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         ref = Database.database().reference()
         
         let a = Auth.auth().currentUser?.email
@@ -67,21 +71,32 @@ class chapPageViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
-        let a = segue.destination as! discussionForumViewController
-        let b = segue.destination as! joinViewController
         // Pass the selected object to the new view controller.
         if(segue.identifier == "toDF")
         {
+            let a = segue.destination as! discussionForumViewController
             a.chapterChild = code2
         }
         else if(segue.identifier == "fbPage")
         {
+            let b = segue.destination as! joinViewController
             b.link = ""
         }
+        else if(segue.identifier == "toAboutChap")
+        {
+            let c = segue.destination as! AboutChapterViewController
+            c.chap = navTitle
+        }
+        
     }
     @IBAction func toFB(_ sender: UIButton) {
         performSegue(withIdentifier: "fbPage", sender: self)
     }
+    
+    @IBAction func toAboutChapter(_ sender: UIButton) {
+        performSegue(withIdentifier: "toAboutChap", sender: self)
+    }
+    
     
    
 }

@@ -71,9 +71,11 @@ class FirstViewController: UIViewController {
         performSegue(withIdentifier: "join", sender: self)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let a = segue.destination as! joinViewController
-        
-        a.link = "https://www.ieee.org/membership/join/index.html"
+        if(segue.identifier == "join")
+        {
+            let a = segue.destination as! joinViewController
+            a.link = "https://www.ieee.org/membership/join/index.html"
+        }
     }
     
 }
