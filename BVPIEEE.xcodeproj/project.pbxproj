@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2D30164C22787E0E6A1A2456 /* Pods_BVPIEEE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */; };
 		533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533689C4215FEF9700CC41D7 /* WInfoViewController.swift */; };
+		5337706921746DB600EA959D /* fbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337706821746DB600EA959D /* fbViewController.swift */; };
 		5371ED2C21744930002AED4C /* AboutChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371ED2B21744930002AED4C /* AboutChapterViewController.swift */; };
 		53760AAC213EACE2009F6E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAB213EACE2009F6E09 /* AppDelegate.swift */; };
 		53760AAE213EACE2009F6E09 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAD213EACE2009F6E09 /* HomeViewController.swift */; };
@@ -28,6 +29,7 @@
 /* Begin PBXFileReference section */
 		3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVPIEEE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		533689C4215FEF9700CC41D7 /* WInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WInfoViewController.swift; sourceTree = "<group>"; };
+		5337706821746DB600EA959D /* fbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fbViewController.swift; sourceTree = "<group>"; };
 		5371ED2B21744930002AED4C /* AboutChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutChapterViewController.swift; sourceTree = "<group>"; };
 		53760AA8213EACE2009F6E09 /* BVPIEEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVPIEEE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53760AAB213EACE2009F6E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				537EF6402166146600472FE9 /* discussionForumViewController.swift */,
 				53C039D221736F87002C0DDF /* joinViewController.swift */,
 				5371ED2B21744930002AED4C /* AboutChapterViewController.swift */,
+				5337706821746DB600EA959D /* fbViewController.swift */,
 				53760AB1213EACE2009F6E09 /* Main.storyboard */,
 				53760AB4213EACE3009F6E09 /* Assets.xcassets */,
 				53760AB6213EACE3009F6E09 /* LaunchScreen.storyboard */,
@@ -272,6 +275,7 @@
 				5371ED2C21744930002AED4C /* AboutChapterViewController.swift in Sources */,
 				53760AAE213EACE2009F6E09 /* HomeViewController.swift in Sources */,
 				53C039D321736F87002C0DDF /* joinViewController.swift in Sources */,
+				5337706921746DB600EA959D /* fbViewController.swift in Sources */,
 				533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */,
 				53ED5214215FA2A100A56519 /* WorkshopsTable.swift in Sources */,
 				53DE1B6F21636F75009181B7 /* chapPageViewController.swift in Sources */,

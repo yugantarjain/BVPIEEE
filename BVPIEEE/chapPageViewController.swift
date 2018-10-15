@@ -17,6 +17,7 @@ class chapPageViewController: UIViewController {
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     var member = false
+    var fbLink: String!
 
     @IBOutlet weak var image: UIImageView!
     
@@ -28,6 +29,20 @@ class chapPageViewController: UIViewController {
         self.title = navTitle
         image.image = UIImage(named: code2)
         
+        switch(navTitle)
+        {
+        case "RAS": fbLink = "https://www.facebook.com/bvpieeeras"
+        case "CS": fbLink = "https://www.facebook.com/BVPIEEECS"
+        case "IAS": fbLink = "https://www.facebook.com/BVPIEEE-IAS-483730548444337/"
+        case "HKN": fbLink = "https://www.facebook.com/IEEE-HKN-Bvcoe-275757819137835/"
+        case "WIE": fbLink = "https://www.facebook.com/WieMeet2k15/"
+        case "CODE-X": fbLink = "https://www.facebook.com/bvpieeecodex/"
+        case "DRISHTI": fbLink = "https://www.facebook.com/drishti.bvpieee.7/"
+        case "BQC": fbLink = "https://www.facebook.com/BVCOE-Quizzing-Club-2048443498818392/?modal=admin_todo_tour"
+        case "E-CELL": fbLink = "https://www.facebook.com/pages/category/Community/E-Cell-BVPIEEE-648188411872430/"
+        case "GAMMA": fbLink = "https://www.facebook.com/BVP-IEEE-GAMMA-310761423006269/"
+        default: print("link not available")
+        }
         
     }
     
@@ -77,10 +92,11 @@ class chapPageViewController: UIViewController {
             let a = segue.destination as! discussionForumViewController
             a.chapterChild = code2
         }
-        else if(segue.identifier == "fbPage")
+        else if(segue.identifier == "toFBPage")
         {
-            let b = segue.destination as! joinViewController
-            b.link = ""
+            let b = segue.destination as! fbViewController
+            b.link = fbLink
+            b.navTitle = "(" + self.navTitle + ")"
         }
         else if(segue.identifier == "toAboutChap")
         {
@@ -90,7 +106,7 @@ class chapPageViewController: UIViewController {
         
     }
     @IBAction func toFB(_ sender: UIButton) {
-        performSegue(withIdentifier: "fbPage", sender: self)
+        performSegue(withIdentifier: "toFBPage", sender: self)
     }
     
     @IBAction func toAboutChapter(_ sender: UIButton) {
