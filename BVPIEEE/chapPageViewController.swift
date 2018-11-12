@@ -92,6 +92,11 @@ class chapPageViewController: UIViewController {
             let a = segue.destination as! discussionForumViewController
             a.chapterChild = code2
         }
+        else if(segue.identifier == "toRT")
+        {
+            let b = segue.destination as! ResourcesTableViewController
+            b.chapter = navTitle.lowercased()
+        }
         else if(segue.identifier == "toFBPage")
         {
             let b = segue.destination as! fbViewController
@@ -105,14 +110,25 @@ class chapPageViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func toResources(_ sender: UIButton) {
+        if(member == true)
+        {
+            performSegue(withIdentifier: "toRT", sender: self)
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Content Locked", message: "This feature can be accessed by IEEE members only", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Close", comment: "Default action"), style: .default, handler: { _ in
+                print("alert presented")
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
     @IBAction func toFB(_ sender: UIButton) {
         performSegue(withIdentifier: "toFBPage", sender: self)
     }
-    
     @IBAction func toAboutChapter(_ sender: UIButton) {
         performSegue(withIdentifier: "toAboutChap", sender: self)
     }
-    
-    
-   
 }
