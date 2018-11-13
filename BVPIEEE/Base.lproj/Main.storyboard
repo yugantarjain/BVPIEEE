@@ -1130,7 +1130,7 @@
                     <navigationItem key="navigationItem" title="More" id="JLp-vi-JM7"/>
                     <connections>
                         <outlet property="adminButton" destination="R0u-mK-hBK" id="iBc-eK-495"/>
-                        <segue destination="caS-Ce-ut4" kind="show" identifier="back" id="AQL-g0-f0t"/>
+                        <segue destination="caS-Ce-ut4" kind="showDetail" identifier="back" id="AQL-g0-f0t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lGD-er-Avw" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseAuth
+import GoogleSignIn
 
 class MoreViewController: UIViewController {
     
@@ -74,14 +75,26 @@ class MoreViewController: UIViewController {
         let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
+            GIDSignIn.sharedInstance()?.signOut()
+            performSegue(withIdentifier: "back", sender: self)
         } catch let signOutError as NSError {
             print ("Error signing out: %@", signOutError)
         }
-        performSegue(withIdentifier: "back", sender: self)
     }
     @IBAction func contact(_ sender: UIButton) {
     }
     @IBAction func adminPage(_ sender: UIButton) {
+    }
+    
+    private func callNumber(phoneNumber:String) {
+        
+        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+            
+            let application:UIApplication = UIApplication.shared
+            if (application.canOpenURL(phoneCallURL)) {
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+            }
+        }
     }
     
     /*

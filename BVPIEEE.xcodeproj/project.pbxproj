@@ -112,12 +112,12 @@
 				5337706821746DB600EA959D /* fbViewController.swift */,
 				53CA8B732197321C00AE31CF /* ResourcesTableViewController.swift */,
 				539309C72199AFC0007DDF72 /* ResourceViewController.swift */,
+				53465B0C219ABC5600246B67 /* MoreViewController.swift */,
 				53760AB1213EACE2009F6E09 /* Main.storyboard */,
 				53760AB4213EACE3009F6E09 /* Assets.xcassets */,
 				53760AB6213EACE3009F6E09 /* LaunchScreen.storyboard */,
 				53760AB9213EACE3009F6E09 /* Info.plist */,
 				53760ABF213EAE1A009F6E09 /* GoogleService-Info.plist */,
-				53465B0C219ABC5600246B67 /* MoreViewController.swift */,
 			);
 			path = BVPIEEE;
 			sourceTree = "<group>";
