@@ -14,7 +14,9 @@ class ResourcesTableViewController: UITableViewController {
     var ref: DatabaseReference!
     var handle: DatabaseHandle!
     var postData = [String]()
+    var links = [String]()
     var chapter: String!
+    var rName: String!
     
     @IBOutlet var resourcesTable: UITableView!
     
@@ -36,8 +38,10 @@ class ResourcesTableViewController: UITableViewController {
             {
                 let a = data.value as?  [String: AnyObject]
                 let b = a?["name"]
+                let c = a?["link"]
                 print(b)
                 self.postData.append(b as! String)
+                self.links.append(c as! String)
             }
             self.resourcesTable.reloadData()
         })
@@ -54,6 +58,7 @@ class ResourcesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         cell?.textLabel?.text = postData[indexPath.row]
+//        cell?.detailTextLabel?.text = 
         return cell!
 
     }
@@ -61,6 +66,24 @@ class ResourcesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return postData.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        rName = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        performSegue(withIdentifier: "toResource", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let a = segue.destination as! ResourceViewController
+        a.navTitle = rName
+        for (index,value) in postData.enumerated()
+        {
+            if(value == rName)
+            {
+                a.link = links[index]
+                break
+            }
+        }
     }
 
     /*

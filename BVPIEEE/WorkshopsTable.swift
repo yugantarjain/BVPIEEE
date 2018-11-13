@@ -39,8 +39,6 @@ class workshopsTableViewController: UIViewController, UITableViewDataSource, UIT
             self.postData.append(ss)
             self.tableView.reloadData()
         })
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
