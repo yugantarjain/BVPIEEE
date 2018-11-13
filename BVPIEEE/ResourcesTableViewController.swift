@@ -15,6 +15,7 @@ class ResourcesTableViewController: UITableViewController {
     var handle: DatabaseHandle!
     var postData = [String]()
     var links = [String]()
+    var dates = [String]()
     var chapter: String!
     var rName: String!
     
@@ -39,9 +40,10 @@ class ResourcesTableViewController: UITableViewController {
                 let a = data.value as?  [String: AnyObject]
                 let b = a?["name"]
                 let c = a?["link"]
-                print(b)
+                let d = a?["date"]
                 self.postData.append(b as! String)
                 self.links.append(c as! String)
+                self.dates.append(d as! String)
             }
             self.resourcesTable.reloadData()
         })
@@ -58,7 +60,7 @@ class ResourcesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell")
         cell?.textLabel?.text = postData[indexPath.row]
-//        cell?.detailTextLabel?.text = 
+        cell?.detailTextLabel?.text = dates[indexPath.row]
         return cell!
 
     }

@@ -10,6 +10,7 @@
 		2D30164C22787E0E6A1A2456 /* Pods_BVPIEEE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */; };
 		533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533689C4215FEF9700CC41D7 /* WInfoViewController.swift */; };
 		5337706921746DB600EA959D /* fbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337706821746DB600EA959D /* fbViewController.swift */; };
+		53465B0D219ABC5600246B67 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53465B0C219ABC5600246B67 /* MoreViewController.swift */; };
 		5371ED2C21744930002AED4C /* AboutChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5371ED2B21744930002AED4C /* AboutChapterViewController.swift */; };
 		53760AAC213EACE2009F6E09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAB213EACE2009F6E09 /* AppDelegate.swift */; };
 		53760AAE213EACE2009F6E09 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53760AAD213EACE2009F6E09 /* HomeViewController.swift */; };
@@ -32,6 +33,7 @@
 		3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVPIEEE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		533689C4215FEF9700CC41D7 /* WInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WInfoViewController.swift; sourceTree = "<group>"; };
 		5337706821746DB600EA959D /* fbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fbViewController.swift; sourceTree = "<group>"; };
+		53465B0C219ABC5600246B67 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		5371ED2B21744930002AED4C /* AboutChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutChapterViewController.swift; sourceTree = "<group>"; };
 		53760AA8213EACE2009F6E09 /* BVPIEEE.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BVPIEEE.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		53760AAB213EACE2009F6E09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				53760AB6213EACE3009F6E09 /* LaunchScreen.storyboard */,
 				53760AB9213EACE3009F6E09 /* Info.plist */,
 				53760ABF213EAE1A009F6E09 /* GoogleService-Info.plist */,
+				53465B0C219ABC5600246B67 /* MoreViewController.swift */,
 			);
 			path = BVPIEEE;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53465B0D219ABC5600246B67 /* MoreViewController.swift in Sources */,
 				539309C82199AFC0007DDF72 /* ResourceViewController.swift in Sources */,
 				53C039D121735BA8002C0DDF /* SigsViewController.swift in Sources */,
 				53DB8EDF2163C85300792ADC /* SignInViewController.swift in Sources */,

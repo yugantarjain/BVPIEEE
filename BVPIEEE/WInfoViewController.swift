@@ -53,9 +53,9 @@ class WInfoViewController: UIViewController, WKUIDelegate {
     
     
     override func viewDidAppear(_ animated: Bool) {
-        if(self.link.hasPrefix("htt")==false)
+        if(self.link.hasPrefix("htt")==true)
         {
-            self.regButton.isEnabled = false
+            self.regButton.isHidden = false
         }
     }
     
