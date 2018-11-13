@@ -81,21 +81,18 @@ class MoreViewController: UIViewController {
             print ("Error signing out: %@", signOutError)
         }
     }
-    @IBAction func contact(_ sender: UIButton) {
-    }
-    @IBAction func adminPage(_ sender: UIButton) {
-    }
     
-    private func callNumber(phoneNumber:String) {
-        
-        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
-            
-            let application:UIApplication = UIApplication.shared
-            if (application.canOpenURL(phoneCallURL)) {
-                application.open(phoneCallURL, options: [:], completionHandler: nil)
-            }
-        }
-    }
+    
+//    private func callNumber(phoneNumber:String) {
+//
+//        if let phoneCallURL = URL(string: "tel://\(phoneNumber)") {
+//
+//            let application:UIApplication = UIApplication.shared
+//            if (application.canOpenURL(phoneCallURL)) {
+//                application.open(phoneCallURL, options: [:], completionHandler: nil)
+//            }
+//        }
+//    }
     
     /*
     // MARK: - Navigation

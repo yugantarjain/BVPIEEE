@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D30164C22787E0E6A1A2456 /* Pods_BVPIEEE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */; };
+		532ACD54219AE94400C4584E /* adminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 532ACD53219AE94400C4584E /* adminViewController.swift */; };
 		533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 533689C4215FEF9700CC41D7 /* WInfoViewController.swift */; };
 		5337706921746DB600EA959D /* fbViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5337706821746DB600EA959D /* fbViewController.swift */; };
 		53465B0D219ABC5600246B67 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53465B0C219ABC5600246B67 /* MoreViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		3ACB1B772D18AE32BCE79FA7 /* Pods_BVPIEEE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BVPIEEE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		532ACD53219AE94400C4584E /* adminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminViewController.swift; sourceTree = "<group>"; };
 		533689C4215FEF9700CC41D7 /* WInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WInfoViewController.swift; sourceTree = "<group>"; };
 		5337706821746DB600EA959D /* fbViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fbViewController.swift; sourceTree = "<group>"; };
 		53465B0C219ABC5600246B67 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 				53CA8B732197321C00AE31CF /* ResourcesTableViewController.swift */,
 				539309C72199AFC0007DDF72 /* ResourceViewController.swift */,
 				53465B0C219ABC5600246B67 /* MoreViewController.swift */,
+				532ACD53219AE94400C4584E /* adminViewController.swift */,
 				53760AB1213EACE2009F6E09 /* Main.storyboard */,
 				53760AB4213EACE3009F6E09 /* Assets.xcassets */,
 				53760AB6213EACE3009F6E09 /* LaunchScreen.storyboard */,
@@ -289,6 +292,7 @@
 				53C039D321736F87002C0DDF /* joinViewController.swift in Sources */,
 				53CA8B742197321C00AE31CF /* ResourcesTableViewController.swift in Sources */,
 				5337706921746DB600EA959D /* fbViewController.swift in Sources */,
+				532ACD54219AE94400C4584E /* adminViewController.swift in Sources */,
 				533689C5215FEF9700CC41D7 /* WInfoViewController.swift in Sources */,
 				53ED5214215FA2A100A56519 /* WorkshopsTable.swift in Sources */,
 				53DE1B6F21636F75009181B7 /* chapPageViewController.swift in Sources */,
