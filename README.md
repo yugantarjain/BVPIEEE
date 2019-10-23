@@ -15,3 +15,5 @@ Main features-
 ![Chap-SIG](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/chap-sig.png)
 
 ![CS-Drishti](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/cs-drishti.png)
+
+![discuss-resource](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/forum-resource.png)
