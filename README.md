@@ -12,6 +12,6 @@ Main features-
 
 ![Home](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/Home.png)
 
-![Chapters](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/Chapters.png)
+![Chap-SIG](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/chap-sig.png)
 
-![CS](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/CS.png)
+![CS-Drishti](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/cs-drishti.png)
