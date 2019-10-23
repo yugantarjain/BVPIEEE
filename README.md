@@ -10,7 +10,7 @@ Main features-
 
 ## Screenshots
 
-![Home](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/Home.png)
+![Home](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/SS-Home.png)
 
 ![Chap-SIG](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/chap-sig.png)
 
