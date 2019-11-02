@@ -17,3 +17,5 @@ Main features-
 ![CS-Drishti](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/cs-drishti.png)
 
 ![discuss-resource](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/forum-resource.png)
+
+*Refer to the screenshots folder for complete reference
