@@ -23,3 +23,4 @@ Main features-
 |||
 -|-
 ![Home](/DeviceScreenshots/Home.png) | ![Workshop](/DeviceScreenshots/Workshop.png)
+![Chapters](/DeviceScreenshots/Chapters.png) | ![Workshop](/DeviceScreenshots/SIGs.png)
