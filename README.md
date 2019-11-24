@@ -24,4 +24,5 @@ Main features-
 -|-
 ![Home](/DeviceScreenshots/Home.png) | ![Workshop](/DeviceScreenshots/Workshop.png)
 ![Chapters](/DeviceScreenshots/Chapters.png) | ![SIGs](/DeviceScreenshots/SIGs.png)
-![Chapter_RAS](/DeviceScreenshots/RAS.png) | ![SIG_Drishti](/DeviceScreenshots/Drishti.png)
+![Chapter_RAS](/DeviceScreenshots/RAS.png) | ![SIG_Drishti](/DeviceScreenshots/DRISHTI.png)
+![Resources](/DeviceScreenshots/Resources.png) | ![Resource](/DeviceScreenshots/resource.png)
