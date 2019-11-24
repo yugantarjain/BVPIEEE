@@ -19,3 +19,7 @@ Main features-
 ![discuss-resource](https://github.com/yugantarjain/BVPIEEE/blob/master/Screenshots/forum-resource.png)
 
 *Refer to the screenshots folder for complete reference
+
+|||
+-|-
+![Home](/DeviceScreenshots/Home.png) | ![Workshop](/DeviceScreenshots/Workshop.png)
